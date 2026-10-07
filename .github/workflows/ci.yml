@@ -36,7 +36,11 @@ jobs:
           GOARCH: amd64
         run: go vet ./...
 
-      - name: go test (platform-neutral logic: args, match, color, display)
+      # this wrong/mistake
+      # - name: go test (platform-neutral logic: args, match, color, display)
+      #   run: go test ./... -v
+
+      - name: "go test (platform-neutral logic: args, match, color, display)"
         run: go test ./... -v
 
   build:
