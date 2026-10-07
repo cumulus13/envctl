@@ -40,6 +40,7 @@ jobs:
             -o dist/envctl.exe .
           go build -ldflags "-s -w -X main.version=${{ github.ref_name }}" \
             -o dist/envlist.exe .
+          go build -ldflags "-s -w -X main.version=${{ github.ref_name }}" \
             -o dist/env.exe .
 
       - name: package
